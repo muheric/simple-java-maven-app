@@ -6,12 +6,12 @@ pipeline {
         }
     }
     stages {
-        stage {
-            steps ('Build') {
+        stage ('Build'){
+            
                 steps {
                     sh 'mvn -B -DskipTests clean packges'
                 }
             }
         }
     }
-}
+
